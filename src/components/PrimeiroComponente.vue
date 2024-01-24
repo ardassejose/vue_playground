@@ -1,9 +1,18 @@
 <template>
-  <h1>Olá Vue.js!</h1>
+  <div>
+    <h1>Olá Vue.js!</h1>
+    <p>Meu nome é {{ nome }} e trabalho como {{ profissao }}</p>
+  </div>
 </template>
 
-<script>
+<script defer>
   export default {
-    name: "PrimeiroComponente"
+    name: "PrimeiroComponente",
+    data() {
+      return {
+        nome: "Víctor",
+        profissao: "Programador"
+      }
+    }
   }
 </script>
