@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p>{{ email }} </p>
     <p v-if="isWorking">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de um trampo</p>
     <p>Utilizo as seguintes tecnologias para Backend:</p>
@@ -34,11 +35,13 @@ export default {
   components: {
     Picture,
   },
+  props: {
+    email: String
+  },
   data() {
     return {
       isWorking: true,
       showEmail: false,
-      email: "victor.ardasse@info.com",
       myLink: "https://www.google.com",
       textButton: "Mostrar e-mail",
       backendTechnology: ["Javascript", "Java", "C#", "MongoDB", "CSS"],
