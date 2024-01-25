@@ -6,12 +6,14 @@
       <li><a href="">Descrição</a></li>
       <li><a href="">Contato</a></li>
       <li><a href="">Jurídico</a></li>
+      <li v-if="isLogged"><a href="" target="_blank" rel="noopener noreferrer">Meu perfil</a></li>
     </ul>
   </header>
 </template>
 <script>
 export default {
   name: "Header",
+  props: ['isLogged']
 };
 </script>
 
